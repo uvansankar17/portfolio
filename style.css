@@ -10,6 +10,7 @@
 html {
   scroll-behavior: smooth;
   background-color: #f7f4f4;
+  overflow-x: hidden;
 }
 :root {
   --first-color: #4070f4;
@@ -116,6 +117,7 @@ img {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  width: 93%;
  }
 .home1{
   margin-top:12%;
@@ -148,7 +150,7 @@ span{
   border-radius:5%;
 } 
 
-@media all and (max-width:380px){
+@media all and (max-width:450px){
   .home_image img{
     height: 195px;
     width:170px;
@@ -159,7 +161,7 @@ span{
   .home_button{
     padding: 9px;
     font-size: 0.9em;
-    margin-right: 2px;
+    /* margin-right: 2px; */
     border-radius: 5px;
   }
   .home_detail{
@@ -167,13 +169,16 @@ span{
     font-size: 0.9em;
     margin-top: 12%;
   }
+  .home{
+    overflow-x: hidden;
+  }
 }
 
 /* ABOUT SECTION  */
 
 .aboutme{
   width: 93%;
-  margin:5vw 2.5vw;
+  margin:5vw 2vw;
   display: grid;
   justify-content:center;
   align-items: center;
@@ -218,17 +223,20 @@ font-size: 0.8rem;
   letter-spacing: 0.1em;
 }
 /* RES ABOUT */
-@media all and (max-width:360px) {
+@media all and (max-width:400px) {
   .aboutme{
-    margin-top: 2.5rem;
+    margin-top: 2rem;
+    /* margin-right: 0; */
+    overflow-x: hidden;
   }
   .aboutcontent{
     font-size: 0.7rem;
     font-weight: 500;
     text-align: center;
-    padding: 0 1rem;
+    padding: 0 0.8rem;
     line-height: 1.5em;
     color: #444444;
+    /* margin-right: 0; */
   }
   .aboutcontent p span{
     font-size:0.8rem;
@@ -240,7 +248,7 @@ font-size: 0.8rem;
 
 .container{
   width: 93%;
-  margin:3vw 2.5vw;
+  margin:3vw 2vw;
 }
 .headingskill{
   text-align: center;
@@ -297,7 +305,7 @@ background: linear-gradient(45deg,#6759a7,#7798f3);
 
 /* HR LINE EVERY SECTION */
 .hrline{
-  width: 100%;
+  width: 1%;
   height: 2px;
   margin: 2% 0;
   color: #41347a;
@@ -507,7 +515,7 @@ cursor: pointer;
 
 @media screen and (max-width:600px){
   .timeline{
-    margin: 50px auto;
+    margin: 40px auto;
   }
   .timeline:after{
     left:3px;
@@ -525,15 +533,10 @@ cursor: pointer;
   .textbox small, p{
   font-size: 0.7em;
   }
-  .leftcontainerarrow{
+  .leftcontainerarrow, .rightcontainerarrow{
     border-right: 15px solid #7798f3;
-    border-left:0;
-    left:-6%;
+    border-left: 0;
+    left: -15px;
   }
-  .rightcontainerarrow{
-    border-right: 15px solid #7798f3;
-    border-left:0;
-    left:-15;
-}
 }
 

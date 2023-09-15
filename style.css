@@ -1,0 +1,539 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: o;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+html {
+  scroll-behavior: smooth;
+  background-color: #f7f4f4;
+}
+:root {
+  --first-color: #4070f4;
+  --second-color: #1b3f53;
+  --gradient-color: linear-gradient(90deg, #3f2b96 0%, #a8c0ff 100%);
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 5;
+  background: linear-gradient(45deg,#41347a,#4070f4);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+ nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        margin: 1px;
+        
+    }
+    .logo{
+        font-size: 1.8em;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: #fff;
+        margin-left: 5px;
+    }
+    ul li{
+        display: inline-block;
+        margin-right:3rem;
+        font-size: 1.1em;
+        font-weight: 600;
+    }
+    a { color:#fff; }
+  
+     li:after{
+        content: '';
+        display: block;
+        height: 2px;
+        width: 0%;
+        margin:auto;
+        border-radius: 15%;
+        transition: all 0.3s ease;
+    } 
+
+    li:hover:after{
+        background-color: rgb(247, 245, 248);
+        width: 100%; 
+    }
+   
+    .menuline{
+        height: 3px;
+        width: 20px;
+        background-color:#fff;
+        margin-bottom:2px;
+        border-radius:5px;
+        align-self: baseline;
+    }
+    .menu{
+        cursor:pointer;
+        display: none;
+    }
+
+/* responsive navbar */
+
+    @media all and (max-width:530px){
+        nav{
+            flex-direction: column;
+        }
+         nav ul li{
+            display:block;
+            text-align: center;
+            padding:10px 0px;
+        }
+        ul{
+            display: none;
+        }
+        .logo{
+          align-self: flex-start;
+          font-size: 1.2em; }
+
+        .menu{
+            display: block;
+            position: absolute;
+            right: 20px;
+            top:18px;  
+        }
+
+        .listmenu{
+            display: block;
+        }
+    }
+
+/* HOME SECTION STYLES */
+.home{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+ }
+.home1{
+  margin-top:12%;
+  margin-left: 5%;
+}
+.home_detail{
+  font-size:1.2em;
+  font-family: 'Poppins',sans-serif;
+  margin-bottom: 15%;
+}
+span{
+    color:#41347a; 
+}
+.home_button{
+  background-color: var(--first-color);
+  color: #fff;
+  font-size: 20px;
+  padding: 14px;
+  border-radius: 5px;
+  margin-right: 25px;
+  position: relative;
+} 
+.home_image{
+  margin-top: 8%;
+  width: 300px;
+} 
+.home_image img{
+  height: 290px;
+  width: 250px;
+  border-radius:5%;
+} 
+
+@media all and (max-width:380px){
+  .home_image img{
+    height: 195px;
+    width:170px;
+    border-radius:45%;
+    position: relative;
+    left: 25%;
+  }
+  .home_button{
+    padding: 9px;
+    font-size: 0.9em;
+    margin-right: 2px;
+    border-radius: 5px;
+  }
+  .home_detail{
+    font-family: 'Poppins',sans-serif;
+    font-size: 0.9em;
+    margin-top: 12%;
+  }
+}
+
+/* ABOUT SECTION  */
+
+.aboutme{
+  width: 93%;
+  margin:5vw 2.5vw;
+  display: grid;
+  justify-content:center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 40px;
+  margin-bottom: 10px;
+}
+
+.aboutheading{
+  color:#41347a;
+  font-size:2em;
+  align-items: center;
+  transition: all 1.2s linear;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+}
+.aboutheading:hover{
+  transform: scale(1.1);
+  color:var(--first-color);
+} 
+.aboutcontent{
+  margin-top: -1px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  font-family: 'Poppins', sans-serif;
+  text-align: justify;
+}
+.aboutcontent p span{
+color: #41347a;
+font-size: 0.8rem;
+}
+.moredetails{
+  padding: 0.8em;
+  background-color:var(--first-color);
+  color: #fff;
+  border: none;
+  border-radius: 5%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  transition: all 0.2s;
+}
+.moredetails:hover{
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.16);
+  letter-spacing: 0.1em;
+}
+/* RES ABOUT */
+@media all and (max-width:360px) {
+  .aboutme{
+    margin-top: 2.5rem;
+  }
+  .aboutcontent{
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 0 1rem;
+    line-height: 1.5em;
+    color: #444444;
+  }
+  .aboutcontent p span{
+    font-size:0.8rem;
+  }
+  
+}
+
+/* SKILLS */
+
+.container{
+  width: 93%;
+  margin:3vw 2.5vw;
+}
+.headingskill{
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+  padding: 15px 0px;
+  color: #41347a;
+  text-shadow: rgba(0, 0, 0, 0.16) 0px 10px 20px;
+  transition: all 0.2s ease;
+}
+.headingskill:hover{
+  letter-spacing: 0.1rem;
+  transform: scale(1.02);
+  cursor: pointer;
+}
+.boxcontainer{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(290px,1fr));
+  gap:1.8rem;
+}
+.box{
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+padding: 1.6rem;
+border-radius: 5%;
+text-align: center;
+background-color: #a08bda;
+background: linear-gradient(45deg,#6759a7,#7798f3);
+}
+.box:hover{
+  transform: scale(1.03);
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.box img{
+  position: relative;
+  left: 8.5rem;
+}
+.box h3{
+  font-size: 1.3rem;
+  color:#fff;
+  font-family: 'Poppins', sans-serif;
+}
+.box p{
+  color:#d8d7d7;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.78rem;
+}
+
+@media all and (max-width:370px){
+.box img{
+  position: relative;
+  left: 5.3em;
+}
+}
+
+/* HR LINE EVERY SECTION */
+.hrline{
+  width: 100%;
+  height: 2px;
+  margin: 2% 0;
+  color: #41347a;
+  border-radius: 5%;
+}
+
+@media screen and (max-width:370px)
+{
+  .profilehrline{
+    margin: 12% 0;
+  }
+}
+/* CONTACT */
+.contact{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(45deg,#41347a,#4070f4);
+  border-radius: 2.5%;
+}
+.contheader{
+  font-size: 1.3rem;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: #fff;
+  padding:2rem 0;
+  transition: all 0.2s linear;
+}
+.contact h1:hover{
+  color: #f7f4f4;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+}
+#conspa{
+  position: relative;
+  left: 37%;
+} 
+.contcontainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2vw 0;
+  flex-wrap: wrap;
+}
+.contactdetails{
+  color: #fff;
+  font-family: 'Poppins',sans-serif;
+  line-height: 0.5rem;
+  font-size: 0.8em;
+  margin-right: 4rem;
+  padding: 0px 4rem;
+  border-right: 2px solid #fff;
+
+}
+.contactdetails p{
+  padding: 0px 1rem;
+}
+.chrline{
+  margin-bottom:3em;
+}
+
+/* CONTACT RESPONSE */
+
+@media all and (max-width:370px){
+  #conspa{
+    display: none;
+  }
+  .contcontainer{
+    display: grid;
+  }
+  .contactdetails{
+    border: none;
+    margin: 10px;
+    padding: 10px;
+  }
+  .contactsocial{
+    padding: 10px;
+    margin: 0px 10px;
+  }
+}
+
+/* COPYWRIGHT */
+
+.copywright{
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(45deg,#41347a,#4070f4);
+  color: #fff;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: 0.7rem;
+  font-family: 'Poppins',sans-serif;
+  z-index: 100;
+}
+
+/* CERTIFICATE */
+
+.certificate h1{
+  text-align: center;
+  font-family: 'Poppins',sans-serif;
+  font-size: 1em;
+  color: #41347a;
+}
+.cimg{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.cimg img{
+  width: 26em;
+  height: 18em;
+}
+@media screen and (max-width:370px){
+  .cimg img{
+    width:20em;
+    height: 13em;
+    margin-bottom: 0.8em;
+  }
+}
+
+/* TIMELINE EDUCATION */
+
+.edutitle{
+font-size: 2em;
+color:#362a6e;
+text-align: center;
+transition: all 0.2s linear;
+cursor: pointer;
+}
+.edutitle:hover{
+  letter-spacing: 1px;
+}
+.timeline{
+  position: relative;
+  width: 93%;
+  margin:100px auto;
+}
+.container_edu{
+  position: relative;
+  width: 50%;
+  padding:10px 20px;
+}
+.textbox{
+  background-color: #7798f3;
+  border-radius: 8px;
+  padding: 10px 30px;
+  position: relative;
+  font-size: 0.9em;
+  font-family: 'Poppins',sans-serif;
+}
+.leftcontainer{
+  left: 0;
+}
+.rightcontainer{
+  left: 50%;
+}
+.timeline::after{
+  content: '';
+  width: 6px;
+  height: 100%;
+  background-color: #54488a;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: -1;
+  animation: anidown 6s linear forwards;
+}
+@keyframes anidown{
+  0%{height: 0;}
+  100%{height: 100%;}
+}
+.leftcontainerarrow{
+  height: 0;
+  width: 0;
+  position: absolute;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #7798f3;
+  right: -15px;
+  top: 20px;
+}
+.rightcontainerarrow{
+  height: 0;
+  width: 0;
+  position: absolute;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #7798f3;
+  left: -15px;
+  top: 20px;
+}
+ .samestyle{
+  color: #ffffff;
+  font-family: 'Poppins',sans-serif;
+  font-size: 0.8;
+} 
+.textbox h2{
+  color: #362a6e;
+}
+
+/* RESPONSIVE EDUCATION TIMELINE */
+
+@media screen and (max-width:600px){
+  .timeline{
+    margin: 50px auto;
+  }
+  .timeline:after{
+    left:3px;
+  }
+  .container_edu{
+    width: 100%;
+  }
+  .rightcontainer{
+    left: 0;
+  }
+  .textbox h2{
+  font-family: 'Poppins',sans-serif;
+  font-size: 0.9em;
+  }
+  .textbox small, p{
+  font-size: 0.7em;
+  }
+  .leftcontainerarrow{
+    border-right: 15px solid #7798f3;
+    border-left:0;
+    left:-6%;
+  }
+  .rightcontainerarrow{
+    border-right: 15px solid #7798f3;
+    border-left:0;
+    left:-15;
+}
+}
+

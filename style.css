@@ -360,7 +360,7 @@ background: linear-gradient(45deg,#6759a7,#7798f3);
 
 /* CONTACT RESPONSE */
 
-@media all and (max-width:370px){
+@media all and (max-width:450px){
   #conspa{
     display: none;
   }
